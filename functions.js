@@ -36,9 +36,19 @@ const caesarCipher = (string, shift) => {
     return result;
 }
 
+const arrayAnalysis = (array) => {
+    return {
+        average: array.reduce((a, b) => a + b, 0) / array.length,
+        min: Math.min(...array),
+        max: Math.max(...array),
+        length: array.length
+    }
+}
+
 module.exports = {
     capitalize,
     reverseString,
     calculator,
-    caesarCipher
+    caesarCipher,
+    arrayAnalysis
 };
