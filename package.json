@@ -1,0 +1,15 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">\r <a href=\"https://theodinproject.com/\"><img src=\"https://github.com/yousefelassal/odin-recipes/blob/main/images/top%20logo.png?raw=true\" width=\"300px\" height=\"auto\"></a>\r <h1>Testing Practice</h1>\r <p><a href=\"https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript\">JavaScript</a></p>\r <p><a href=\"https://www.theodinproject.com/lessons/node-path-javascript-testing-practice\">Requirements</a></p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "watch": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
