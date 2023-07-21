@@ -5,3 +5,5 @@
 <p><a href="https://www.theodinproject.com/lessons/node-path-javascript-testing-practice">Requirements</a></p>
 
 </div>
+
+## Resources
