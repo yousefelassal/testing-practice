@@ -9,11 +9,20 @@
 ## Resources
 - [Using Matchers](https://jestjs.io/docs/using-matchers) | Jest Docs
 
-  `toEqual` is used to check the value of an object, it recursively checks every field of an object or array.
-  ```js
-  test('object assignment', () => {
-    const data = {one: 1};
-    data['two'] = 2;
-    expect(data).toEqual({one: 1, two: 2});
-  });
-  ```
+  - `toEqual` is used to check the value of an object, it recursively checks every field of an object or array.
+    ```js
+    test('object assignment', () => {
+      const data = {one: 1};
+      data['two'] = 2;
+      expect(data).toEqual({one: 1, two: 2});
+    });
+    ```
+
+  - For floating point equality, use `toBeCloseTo` instead of `toEqual`, because you don't want a test to depend on a tiny rounding error.
+    ```js
+    test('adding floating point numbers', () => {
+      const value = 0.1 + 0.2;
+      //expect(value).toBe(0.3);           This won't work because of rounding error
+      expect(value).toBeCloseTo(0.3); // This works.
+    });
+    ```
