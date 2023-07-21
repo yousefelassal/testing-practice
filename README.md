@@ -37,3 +37,5 @@
       expect('Christoph').toMatch(/stop/);
     });
     ```
+
+  [complete list of matchers](https://jestjs.io/docs/expect)
