@@ -7,3 +7,13 @@
 </div>
 
 ## Resources
+- [Using Matchers](https://jestjs.io/docs/using-matchers) | Jest Docs
+
+  `toEqual` is used to check the value of an object, it recursively checks every field of an object or array.
+  ```js
+  test('object assignment', () => {
+    const data = {one: 1};
+    data['two'] = 2;
+    expect(data).toEqual({one: 1, two: 2});
+  });
+  ```
