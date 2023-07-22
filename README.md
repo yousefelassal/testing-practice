@@ -42,21 +42,22 @@
 
 - [Repeating Setup](https://jestjs.io/docs/setup-teardown) | Jest Docs
 
-    - If you have some work you need to do repeatedly for many tests, you can use `beforeEach` and `afterEach` hooks.
-      ```js
-      beforeEach(() => {
-        initializeCityDatabase();
-      });
-      
-      afterEach(() => {
-        clearCityDatabase();
-      });
-      
-      test('city database has Vienna', () => {
-        expect(isCity('Vienna')).toBeTruthy();
-      });
-      
-      test('city database has San Juan', () => {
-        expect(isCity('San Juan')).toBeTruthy();
-      });
-      ```
+  - If you have some work you need to do repeatedly for many tests, you can use `beforeEach` and `afterEach` hooks.
+
+    ```js
+    beforeEach(() => {
+      initializeCityDatabase();
+    });
+    
+    afterEach(() => {
+      clearCityDatabase();
+    });
+    
+    test('city database has Vienna', () => {
+      expect(isCity('Vienna')).toBeTruthy();
+    });
+    
+    test('city database has San Juan', () => {
+      expect(isCity('San Juan')).toBeTruthy();
+    });
+    ```
