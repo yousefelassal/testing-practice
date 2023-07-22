@@ -62,3 +62,5 @@
     });
     ```
     In some cases, you only need to do setup once, at the beginning of a file. This can be especially bothersome when the setup is asynchronous, so you can't do it inline. Jest provides `beforeAll` and `afterAll` hooks to handle this situation.
+
+- [Mock Functions](https://jestjs.io/docs/mock-functions) | Jest Docs
