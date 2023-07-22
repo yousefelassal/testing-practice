@@ -64,3 +64,20 @@
     In some cases, you only need to do setup once, at the beginning of a file. This can be especially bothersome when the setup is asynchronous, so you can't do it inline. Jest provides `beforeAll` and `afterAll` hooks to handle this situation.
 
 - [Mock Functions](https://jestjs.io/docs/mock-functions) | Jest Docs
+
+  Once we mock the module we can provide a mockResolvedValue for .get that returns the data we want our test to assert against. In effect, we are saying that we want axios.get('/users.json') to return a fake response.
+  
+  ```js
+  import axios from 'axios';
+  import Users from './users';
+  
+  jest.mock('axios');
+  
+  test('should fetch users', () => {
+    const users = [{name: 'Bob'}];
+    const resp = {data: users};
+    axios.get.mockResolvedValue(resp);
+  
+    return Users.all().then(data => expect(data).toEqual(users));
+  });
+  ```
